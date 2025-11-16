@@ -5,6 +5,4 @@ class EnvelopeDetector:
     @staticmethod
     def detect(signal):
         analytic = hilbert(signal)
-        envelope = np.abs(analytic)
-        compressed = np.log1p(40 * envelope)
-        return envelope, compressed
+        return np.abs(analytic)
